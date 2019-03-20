@@ -23,6 +23,8 @@
         #'security/ir.model.access.csv',
         #'data/ModuleName_data.xml',
         'views/formation_views.xml',
+       'views/formation_inherit.xml',
+        
         'menu.xml',
     ],
     'demo': [
