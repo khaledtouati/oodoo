@@ -16,7 +16,7 @@
             - model2
             - model3
     """,
-    'depends': ['base', 'mail'],
+    'depends': ['base', 'mail' ,'hr'],
     'summary': 'summary1, summary2, ',
     'data': [
         #'security/ModuleName.xml',

@@ -176,9 +176,15 @@ class Partner(models.Model):
     student_ok = fields.Boolean(string='Est un étudiant')
     birthday = fields.Date(string='Date de naissance')
     age = fields.Integer(string='Age')
+    reg_ids = fields.One2many('registration.registration','student_id', string='Inscription')
+
+class Prof(models.Model):
+    _inherit = 'hr.employee' 
+    _name = 'teacher.teacher'
     
-    
- 
+    age = fields.Integer(string='Age')
+    cin = fields.Char(string='CIN')
+
 
     
     
