@@ -393,7 +393,13 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="form_string">
-		               
+		               <header>
+		                	<button name="action_new" states="cancel" string="Nouveau" type="object" class="oe_highlight"/>
+		                    <button name="action_done" states="new" string="Valider" type="object" class="oe_highlight"/>
+		                    <button name="action_cancel" states="new" string="Annuler" type="object" class="oe_highlight"/>
+		                    <button name="print_report" string="Imprimer" type="object" class="oe_highlight"/>
+		                    <field name="state" widget="statusbar"/>
+		                </header>
                      <sheet>
                      	   
                      
