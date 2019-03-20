@@ -14,6 +14,7 @@
                     </tree>
                 </field>
             </record>
+        <!-- claim.claim :view kanban -->
        
  <!-- claim.claim :view kanban -->
 		<record model="ir.ui.view" id="claim_kanban_view">
