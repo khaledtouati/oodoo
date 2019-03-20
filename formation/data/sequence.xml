@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- Sequences For claim.claim -->
+        <record id="seq_claim_claim" model="ir.sequence">
+            <field name="name">claim.claim</field>
+            <field name="code">claim.claim</field>
+            <field name="prefix">%(year)s/%(month)s/</field>
+            <field name="padding">4</field>
+        </record>
+        
+        <!-- Sequences For registration -->
+        <record id="seq_registr" model="ir.sequence">
+            <field name="name">registration.registration</field>
+            <field name="code">registration.registration</field>
+            <field name="prefix">REG-</field>
+            <field name="padding">4</field>
+        </record>
+
+		      
+</odoo>

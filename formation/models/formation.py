@@ -27,11 +27,11 @@ class Registration(models.Model):
         return True   
     
     @api.model
+    @api.depends('code')
     def create(self, vals):
-                if vals.get('name'):
-                    vals['name'] = ' value by create method'
-                res = super(Registration, self).create(vals)
-                return res
+        if ('code' not in vals) or (vals.get('code')=='/'):
+            vals['code'] = self.env['ir.sequence'].get('registration.registration')
+        return super(Registration, self).create(vals) 
             
    
     @api.multi
@@ -61,7 +61,7 @@ class Registration(models.Model):
         
             
     name=fields.Char(string='Nom', required=False, readonly=False)
-    code=fields.Char(string='Code', required=False, readonly=False)
+    code=fields.Char(string='Code', default='/', readonly=True)
     start_date = fields.Date('Date début',help="Date",track_visibility='onchange')
     end_date = fields.Date('Date fin',help="Date")
     description=fields.Text(string='description', required=False, readonly=False)

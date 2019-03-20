@@ -25,7 +25,7 @@
        
         'views/formation_views.xml',
        'views/formation_inherit.xml',
-      
+       'data/sequence.xml',
         'demo/demo.xml' ,
         
         'menu.xml',
