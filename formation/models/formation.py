@@ -71,6 +71,7 @@ class Registration(models.Model):
     student_id = fields.Many2one('res.partner', string='Etudiant',domain="[('student_ok', '=',True)]", track_visibility='onchange')
     state=fields.Selection([('new', 'Nouveau'), ('done', 'Validé'), ('cancel', 'Annulé')], string= 'Status', default='new',track_visibility='onchange')
     
+    nbr = fields.Integer(compute='_compute_claims', string='#reclamation')
 
 
 class Claim(models.Model):
