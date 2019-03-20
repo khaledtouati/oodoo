@@ -308,8 +308,7 @@
                 <field name="res_model">registration.registration</field>
                 <field name="view_type">form</field>
                 <field name="view_mode">tree,form</field>
-                <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
-                <!-- <field name="context">{'default_field':'value'}</field>-->
+              
             </record>
             
             
