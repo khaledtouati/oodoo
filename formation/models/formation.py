@@ -179,22 +179,7 @@ class Module(models.Model):
     description = fields.Text(string='Description')
     section_id = fields.Many2one('section.section',string='Section')
  
-class Partner(models.Model):
-    _inherit = 'res.partner' 
-    
-    student_ok = fields.Boolean(string='Est un étudiant')
-    birthday = fields.Date(string='Date de naissance')
-    age = fields.Integer(string='Age')
-    reg_ids = fields.One2many('registration.registration','student_id', string='Inscription')
-    
 
-class Prof(models.Model):
-    _name = 'teacher.teacher'
-    
-    age = fields.Integer(string='Age')
-    cin = fields.Char(string='CIN')
- 
-    
     
     
  

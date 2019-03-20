@@ -14,7 +14,7 @@
                     </tree>
                 </field>
             </record>
-        <!-- claim.claim :view kanban -->
+            
        
  <!-- claim.claim :view kanban -->
 		<record model="ir.ui.view" id="claim_kanban_view">
@@ -524,19 +524,5 @@
                    </form>
                 </field>
             </record>
-			
-			<!-- Action view-->
-            <record model="ir.actions.act_window" id="session_action_view">
-                <field name="name">Sessions</field>
-                <field name="type">ir.actions.act_window</field>
-                <field name="res_model">session.session</field>
-                <field name="view_type">form</field>
-                <field name="view_mode">tree,form</field>
-                <!-- <field name="domain">[('field_name','condition',criteria)]</field>-->
-                <!-- <field name="context">{'default_field':'value'}</field>-->
-            </record>
-            
-  
-                          
-                          
+	       
 </odoo>

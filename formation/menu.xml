@@ -5,7 +5,8 @@
 	<menuitem id="module_root" name="ff" />
 				<menuitem id="module_root_menu" parent="module_root" name="Université" sequence='1'/>
 					<menuitem id="module_menu" name="Module" parent="module_root_menu" action="module_action_view"/>
-					<menuitem id="section_menu" name="Section" parent="mosdule_root_menu" action="section_action_view"/>
+					<menuitem id="section_menu" name="Section" parent="module_root_menu" action="section_action_view"/>
+				
 					<menuitem id="level_menu" name="Niveau" parent="module_root_menu" action="level_action_view"/>
 					<menuitem id="cycle_menu" name="Cycle" parent="module_root_menu" action="cycle_action_view"/>
 				
