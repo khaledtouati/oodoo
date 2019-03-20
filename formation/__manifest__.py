@@ -22,13 +22,16 @@
         #'security/ModuleName.xml',
         #'security/ir.model.access.csv',
         #'data/ModuleName_data.xml',
+       
         'views/formation_views.xml',
        'views/formation_inherit.xml',
+      
+        'demo/demo.xml' ,
         
         'menu.xml',
     ],
     'demo': [
-        #'demo/ModuleName_demo.xml'
+        'demo/demo.xml'
     ],
     'css': [
         #'static/src/css/ModuleName_style.css'
