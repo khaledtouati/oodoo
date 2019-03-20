@@ -26,14 +26,14 @@ class Registration(models.Model):
         self.state = 'cancel'
         return True   
     
-        
     @api.model
-    @api.depends('code')
     def create(self, vals):
-        if ('code' not in vals) or (vals.get('code')=='/'):
-            vals['code'] = self.env['ir.sequence'].get('registration.registration')
-        return super(Registration, self).create(vals) 
-    
+                if vals.get('name'):
+                    vals['name'] = ' value by create method'
+                res = super(Registration, self).create(vals)
+                return res
+            
+   
     @api.multi
     def write(self, vals):
         vals['name'] = 'value by write method'
@@ -61,7 +61,7 @@ class Registration(models.Model):
         
             
     name=fields.Char(string='Nom', required=False, readonly=False)
-    code=fields.Char(string='Code', default='/', readonly=True)
+    code=fields.Char(string='Code', required=False, readonly=False)
     start_date = fields.Date('Date début',help="Date",track_visibility='onchange')
     end_date = fields.Date('Date fin',help="Date")
     description=fields.Text(string='description', required=False, readonly=False)
@@ -126,6 +126,18 @@ class Cycle(models.Model):
     code=fields.Char(string='Code', required=False, readonly=False)
     description=fields.Text(string='description', required=False, readonly=False)
     level_ids = fields.One2many('level.level','cycle_id', string='Niveau') 
+ 
+ 
+    @api.multi
+    def name_get(self):
+        result = []
+        for record in self:
+            if record.name and record.code:
+                result.append((record.id, record.name + ' -- ' + record.code))
+            if record.name and not record.code:
+                result.append((record.id, record.name))
+        return result   
+    
  
     
 class Level(models.Model):
