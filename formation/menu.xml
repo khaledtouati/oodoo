@@ -12,7 +12,7 @@
 				<menuitem id="ins_root_menu" parent="module_root" name="Inscription" sequence='2'/>
 					<menuitem id="reg_menu" name="Inscription" parent="ins_root_menu" action="reg_action_view"/>
 					<menuitem id="calim_menu" name="Reclamation" parent="ins_root_menu" action="claim_action_view"/>
-					<menuitem id="student_menu" name="Etudiant" parent="ins_root_menu" action="base.action_partner_form"/>
+					<menuitem id="student_menu" name="Etudiant" parent="ins_root_menu" action="student_action_view"/>
 								<menuitem id="prof_menu" name="Professeur" parent="ins_root_menu" action="teacher_action_view"/>
 					
 					<menuitem id="conf_root_menu" parent="module_root" name="Configuration" sequence='3'/>

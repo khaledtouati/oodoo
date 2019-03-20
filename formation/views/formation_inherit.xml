@@ -14,8 +14,8 @@
 		                    	<field name="age" />
 		                    </group>
 	                    </page>  
-	                    <page string='Inscriptions' >
-		                    	<field name="reg_ids"/>
+                        <page string='Inscriptions' attrs="{'invisible':[('customer','=',True)]}">
+ 		                    	<field name="reg_ids"/>
 	                    </page>                                 
                     </page>
                     
