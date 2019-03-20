@@ -537,15 +537,7 @@
             </record>
             
             
-           <record model="ir.actions.act_window" id="student_action_view">
-                <field name="name">Etudiants</field>
-                <field name="type">ir.actions.act_window</field>
-                <field name="res_model">res.partner</field>
-                <field name="view_type">form</field>
-                <field name="view_mode">tree,form,kanban</field>
-                <field name="domain">[('student_ok','=',True)]</field>
-                <field name="context">{'default_student_ok':True}</field>
-            </record>  
+           
                
 	       
 </odoo>

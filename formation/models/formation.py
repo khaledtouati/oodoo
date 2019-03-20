@@ -71,7 +71,6 @@ class Registration(models.Model):
     student_id = fields.Many2one('res.partner', string='Etudiant',domain="[('student_ok', '=',True)]", track_visibility='onchange')
     state=fields.Selection([('new', 'Nouveau'), ('done', 'Validé'), ('cancel', 'Annulé')], string= 'Status', default='new',track_visibility='onchange')
     
-    nbr = fields.Integer(compute='_compute_claims', string='#reclamation')
 
 
 class Claim(models.Model):
@@ -79,13 +78,7 @@ class Claim(models.Model):
     _description = 'Reclamation'
     
     
-    @api.one
-    @api.depends('amount','hours_nbr')
-    def _total_compute(self):
-        if self.hours_nbr:
-            self.total = self.amount * self.hours_nbr
-        else :
-            self.sum = self.amount + self.amount
+    
  
     name=fields.Char(string='Nom', required=False, readonly=False)
     code=fields.Char(string='Code', default=lambda x: x.env['ir.sequence'].get('claim.claim'))
@@ -96,11 +89,6 @@ class Claim(models.Model):
     user_id = fields.Many2one('res.users',string='Responsable')
     state=fields.Selection([('new', 'Nouvelle'), ('done', 'Validé'), ('cancel', 'Annulée')], string= 'Status')
     priority=fields.Selection([('1', 'base'), ('2', 'normal'), ('3', 'hight')], string= 'Priorité')
-    
-    amount = fields.Float(string='Montant')
-    hours_nbr = fields.Integer(string='#heurs')
-    sum = fields.Float(string='Somme')
-    total = fields.Float(compute='_total_compute',string='Total')
     
  
  
@@ -139,15 +127,6 @@ class Cycle(models.Model):
     description=fields.Text(string='description', required=False, readonly=False)
     level_ids = fields.One2many('level.level','cycle_id', string='Niveau') 
  
-    @api.multi
-    def name_get(self):
-        result = []
-        for record in self:
-            if record.name and record.code:
-                result.append((record.id, record.name + ' -- ' + record.code))
-            if record.name and not record.code:
-                result.append((record.id, record.name))
-        return result   
     
 class Level(models.Model):
     _name = 'level.level'

@@ -393,24 +393,9 @@
                 <field name="type">form</field>
                 <field name="arch" type="xml">
                     <form string="form_string">
-		                <header>
-		                	<button name="action_new" states="cancel" string="Nouveau" type="object" class="oe_highlight"/>
-		                    <button name="action_done" states="new" string="Valider" type="object" class="oe_highlight"/>
-		                    <button name="action_cancel" states="new" string="Annuler" type="object" class="oe_highlight"/>
-		                    <button name="print_report" string="Imprimer" type="object" class="oe_highlight"/>
-		                    <field name="state" widget="statusbar"/>
-		                </header>
+		               
                      <sheet>
-                     	   <div class="oe_button_box" name="button_box">
-	                        <button name="%(claim_action_view)d"
-                                type="action"
-                                class="oe_inline oe_stat_button"
-                                icon="fa-book"
-                                context="{'search_default_reg_id': active_id}"
-                                help="show the information for this">
-                               <field name="nbr" widget="statinfo" string="Réclamation"/>
-                            </button>   
-	                      </div>
+                     	   
                      
                     	<group>
 	                    	<group>
