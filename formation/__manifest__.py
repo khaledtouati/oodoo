@@ -23,6 +23,9 @@
         #'security/ir.model.access.csv',
         #'data/ModuleName_data.xml',
        
+        'security/formation.xml',
+        'security/ir.model.access.csv',
+       
         'views/formation_views.xml',
        'views/formation_inherit.xml',
        'data/sequence.xml',

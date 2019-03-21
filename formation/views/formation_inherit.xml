@@ -7,7 +7,7 @@
                 <field name="inherit_id" ref="base.view_partner_form"/>
                 <field name="arch" type="xml">
                     <page name="internal_notes" position="after">
-	                    <page string='Infos etudiants' >
+	                    <page string='Infos etudiants' groups='formation.group_user'>
 		                    <group>
 		                    	<field name="student_ok"/>
 		                    	<field name="birthday"/>
