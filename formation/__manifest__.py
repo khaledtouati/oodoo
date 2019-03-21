@@ -26,6 +26,7 @@
         'security/formation.xml',
         'security/ir.model.access.csv',
         'controllers/claim.xml',
+        'controllers/claim.xml',
        'controllers/formation.xml',
         'views/formation_views.xml',
        'views/formation_inherit.xml',
@@ -34,7 +35,7 @@
        'wizard/wiz_views.xml',
         'report/report.xml',
         'report/registration.xml',
-
+         'views/snippet.xml',
         'menu.xml',
     ],
     'demo': [
