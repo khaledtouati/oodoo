@@ -16,5 +16,12 @@
             <field name="padding">4</field>
         </record>
 
+		<!-- menu For website page -->
+        <record id="menu_claim" model="website.menu">
+            <field name="name">Réclamation</field>
+            <field name="url">/formation/claim</field>
+            <field name="parent_id" ref="website.main_menu"/>
+            <field name="sequence" type="int">40</field>
+        </record>        
 		      
 </odoo>

@@ -25,7 +25,8 @@
        
         'security/formation.xml',
         'security/ir.model.access.csv',
-       
+        'controllers/claim.xml',
+       'controllers/formation.xml',
         'views/formation_views.xml',
        'views/formation_inherit.xml',
        'data/sequence.xml',
