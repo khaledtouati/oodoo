@@ -7,6 +7,11 @@ class Registration(models.Model):
     _name = 'registration.registration'
     _description = 'egistration.registration'
     _inherit = ['mail.thread']
+    
+    
+    
+    
+    
 
     @api.multi
     def print_report(self):
