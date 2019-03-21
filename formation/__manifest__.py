@@ -27,7 +27,8 @@
        'views/formation_inherit.xml',
        'data/sequence.xml',
         'demo/demo.xml' ,
-        
+        'wizard/wiz_views.xml',
+
         'menu.xml',
     ],
     'demo': [
